@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "d7a897c2-f18d-48e4-ab7a-e514a68a25a3",
+		"name": "Spotify",
+		"description": "Dokumentasi ini merupakan layanan service dari spotify.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"access_token\":\"brili\",\"user_password\":\"1234\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				},
+				"description": "Endpoints untuk registrasi akun. Data yang harus disubmit antara lain username, password"
+			},
+			"response": []
+		},
+		{
+			"name": "Playlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"access_token\":\"BQBIBEV1FPszAVSubx8oirGHk5_YAFKVvuVBZ-7SEKWEgs8By7vRucSjq1CV-_Gx5aG-IXyX0S4r0PXOj0rzohTZDDx20N9pn6Jv1e2_Dj4cKPpp3TQ592fjFUzEABFX0n7GvGk2Kl32aHJJGH0ILMulESKGwoZUOc7aTcshX8KJRfVuyTO9uWuMpSC1Vf9oJMdgpw\",\"user_id\":\"gy64aryqguloet5e7qquuszye\",\"name_playlist\":\"my mood\",\"description_playlist\":\"Mood dikala hujan\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user/playlist",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"playlist"
+					]
+				},
+				"description": "Pada bagian playlist. Untuk insert Playlist Baru ke Spotify"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Playlist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"access_token\":\"BQBIBEV1FPszAVSubx8oirGHk5_YAFKVvuVBZ-7SEKWEgs8By7vRucSjq1CV-_Gx5aG-IXyX0S4r0PXOj0rzohTZDDx20N9pn6Jv1e2_Dj4cKPpp3TQ592fjFUzEABFX0n7GvGk2Kl32aHJJGH0ILMulESKGwoZUOc7aTcshX8KJRfVuyTO9uWuMpSC1Vf9oJMdgpw\",\"user_id\":\"gy64aryqguloet5e7qquuszye\",\"name_playlist\":\"moodku\",\"description_playlist\":\"Mood dikala hujan\",\"id_playlist\":\"7gCJ6CjfBFmr0nRUQwEjFa\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user/playlist",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"playlist"
+					]
+				},
+				"description": "Pada bagian Update Playlist. Untuk mengubah atau mengupdate Playlist yang telah dibuat"
+			},
+			"response": []
+		},
+		{
+			"name": "Comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"comment_text\":\"Wah bagus sekali\",\"playlist_id\":\"7gCJ6CjfBFmr0nRUQwEjFa\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user/comment_playlist",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"comment_playlist"
+					]
+				},
+				"description": "Pada bagian comment. Untuk insert komentar."
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Comment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"comment_id\":\"1\",\"comment_text\":\"Wah bagus\",\"playlist_id\":\"7gCJ6CjfBFmr0nRUQwEjFa\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user/comment_playlist",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"comment_playlist"
+					]
+				},
+				"description": "Pada bagian edit comment. Untuk merubah isi komentar."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Comment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Pada bagian delete comment. Untuk menghapus komentar yang telah ditambahkan."
+			},
+			"response": []
+		},
+		{
+			"name": "Semua Playlist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/user/playlist?user_id=0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"playlist"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "0"
+						}
+					]
+				},
+				"description": "Pada bagian semua playlist. Untuk menampilkan semua playlist yang ada."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e6c16f7e-1123-41bd-9d86-6722fdbcc46a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f4263f6f-39e3-4b6b-b0a7-4289cc96d73e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
